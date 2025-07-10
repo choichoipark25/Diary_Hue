@@ -11,8 +11,14 @@ module.exports = {
         main: "var(--color-main)",
         sub: "var(--color-sub)",
         accent: "var(--color-accent)",
-        text: "var(--color-text)",
-        "text-sub": "var(--color-text-sub)",
+        text: {
+          DEFAULT: "var(--color-text)",
+          sub: "var(--color-text-sub)",
+        },
+        background: {
+          primary: "var(--color-background-primary)",
+          secondary: "var(--color-background-secondary)",
+        },
       },
       fontFamily: {
         sans: [
@@ -24,6 +30,10 @@ module.exports = {
           "Arial",
           "sans-serif",
         ],
+      },
+      maxWidth: {
+        content: "860px",
+        layout: "1440px",
       },
     },
   },
