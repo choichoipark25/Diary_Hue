@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Lato:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,19 +16,29 @@
 
 @layer base {
   body {
-    @apply bg-background-primary text-text antialiased;
+    @apply bg-bg-primary text-deep-navy antialiased font-korean;
   }
 
+  /* 헤딩 스타일 - 모두 bold(700) */
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-[42px] font-bold leading-tight;
   }
 
   h2 {
-    @apply text-2xl font-semibold;
+    @apply text-[32px] font-bold leading-tight;
   }
 
   h3 {
-    @apply text-xl font-medium;
+    @apply text-[22px] font-bold leading-tight;
+  }
+
+  h4 {
+    @apply text-lg font-bold leading-tight;
+  }
+
+  /* 본문 스타일 - 모두 regular(400) */
+  p {
+    @apply text-lg font-normal leading-relaxed;
   }
 }
 
@@ -36,19 +48,19 @@
   }
 
   .btn-primary {
-    @apply bg-main hover:bg-main/80 text-white;
+    @apply bg-soft-sky-blue hover:bg-soft-sky-blue/80 text-white;
   }
 
   .btn-secondary {
-    @apply bg-sub hover:bg-sub/80 text-white;
+    @apply bg-cozy-pink hover:bg-cozy-pink/80 text-white;
   }
 
   .input {
-    @apply px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-main/50;
+    @apply px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-soft-sky-blue/50;
   }
 
   .card {
-    @apply bg-background-primary rounded-lg shadow-md hover:shadow-lg transition-shadow p-6;
+    @apply bg-bg-primary rounded-lg shadow-md hover:shadow-lg transition-shadow p-6;
   }
 }
 

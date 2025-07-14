@@ -8,17 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        main: "var(--color-main)",
-        sub: "var(--color-sub)",
-        accent: "var(--color-accent)",
-        text: {
-          DEFAULT: "var(--color-text)",
-          sub: "var(--color-text-sub)",
-        },
-        background: {
-          primary: "var(--color-background-primary)",
-          secondary: "var(--color-background-secondary)",
-        },
+        // 메인 컬러 팔레트
+        "soft-sky-blue": "var(--color-main)",
+        "cozy-pink": "var(--color-sub)",
+        "cool-lavender": "var(--color-accent)",
+        "deep-navy": "var(--color-text)",
+        "soft-gray": "var(--color-text-sub)",
+
+        // 배경 컬러
+        "bg-primary": "var(--color-background-primary)",
+        "bg-secondary": "var(--color-background-secondary)",
       },
       fontFamily: {
         sans: [
@@ -30,6 +29,23 @@ module.exports = {
           "Arial",
           "sans-serif",
         ],
+        gowun: ["Gowun Dodum", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
+        korean: ["Gowun Dodum", "sans-serif"],
+        english: ["Lato", "sans-serif"],
+      },
+      fontSize: {
+        // 헤딩 크기들
+        hero: ["42px", { lineHeight: "1.2", fontWeight: "700" }],
+        "page-title": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+        "section-title": ["22px", { lineHeight: "1.3", fontWeight: "700" }],
+        "card-title": ["18px", { lineHeight: "1.3", fontWeight: "700" }],
+
+        // 본문 크기들
+        body: ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+        "body-small": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+        caption: ["14px", { lineHeight: "1.4", fontWeight: "400" }],
+        poetry: ["16px", { lineHeight: "1.6", fontWeight: "400" }],
       },
       maxWidth: {
         content: "860px",
