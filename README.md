@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# [개발] PRD
 
-## Getting Started
+유형: 설정가이드
+상태: 완료
+담당자: Jung Soo Choi
+최종 수정일: 2025년 7월 7일
+관련 프로젝트: 인프라
 
-First, run the development server:
+# 📝 오일시 PRD (Product Requirements Document)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 1. 개요
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **프로젝트명**: 오일시 (오늘의 일기 + 시)
+- **목적**: 사용자가 작성한 일기를 기반으로 AI가 시를 생성해주는 감성 창작 도구
+- **핵심 가치**: 감정 정리, 창작의 즐거움, 공유 가능한 감성 콘텐츠
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 2. 사용자 타겟
 
-## Learn More
+- **1차 타겟**: 20대 여성 직장인 (예: 감정 표현에 관심이 많은 SNS 유저)
+- **2차 타겟**: 감성 콘텐츠를 즐기는 Z세대, 문학 감성 사용자
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 3. 핵심 기능 정의
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3.1 공통 기능 (회원/비회원)
 
-## Deploy on Vercel
+- 일기 작성 입력창
+- Gemini 를 통한 시 생성
+- 시 길이 및 스타일 선택 (예: 서정시, 자유시 등)
+- 생성된 시 복사, 이미지 다운로드
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3.2 회원 전용 기능
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 시 생성 히스토리 저장
+- 향후 고급 기능 접근 (예: 테마 시집 자동 구성)
+
+### 3.3 제약 및 제한
+
+- **비회원 / 회원 모두 일일 시 생성 3회 제한**
+  - 회원은 `userID`, 비회원은 `IP 주소` 기반으로 추적
+- 비회원은 고급 기능 접근 불가
+
+---
+
+## 4. 사용자 시나리오
+
+### 시나리오 A: 비회원 사용 흐름
+
+1. 사용자가 웹사이트 접속
+2. 일기 작성 → 시 생성 (1일 3회)
+3. 결과 복사 또는 다운로드
+4. 고급 기능 클릭 시 → 회원가입 유도
+
+### 시나리오 B: 회원 사용 흐름
+
+1. 로그인 후 시 생성
+2. 시 저장 및 즐겨찾기 추가
+3. 테마별 시집 구성
+4. 반복 사용 및 전환율 증가
+
+---
+
+## 5. 기술 스택 및 시스템 구성
+
+- **Frontend**: Next.js
+- **Backend / Function API**: Firebase Functions
+- **Style** : Tailwind CSS
+- **Language** : TypeScript
+- **Database**: Firestore (Firebase)
+- **AI Model**: Google Gemini (유료 API)
+
+---
+
+## 6. 데이터베이스 개요
+
+| 컬렉션   | 필드 예시                               |
+| -------- | --------------------------------------- |
+| users    | uid, email, createdAt, planType         |
+| poems    | uid, content, aiModel, style, createdAt |
+| sessions | ip, createdAt, dailyCount               |
+
+---
+
+## 7. 수익 모델
+
+- 기본 3회 무료 체험
+- 프리미엄 요금제:
+  - 협의 필요
+
+---
+
+## 8. 기능별 우선순위
+
+| 기능                     | 우선순위 | 비고            |
+| ------------------------ | -------- | --------------- |
+| 시 생성 (Claude API)     | ✅ P0    | 핵심 기능       |
+| 회원가입/로그인          | ✅ P0    | 고급 기능 연동  |
+| 시 저장 및 히스토리      | ✅ P1    | 회원 전용       |
+| 이미지 저장 및 공유 기능 | ✅ P1    | SNS 마케팅 활용 |
+| 모바일 WebView 지원      | 🟡 P2    | 확장성 확보     |
+
+---
+
+## 9. 기타
+
+- 기본 API 호출 수와 사용량에 따라 Gemini 과금 최적화 필요
+- Firebase 무료 요금제 한도 체크 및 추후 업그레이드 검토 필요
