@@ -13,12 +13,14 @@ export default function CalendarPage() {
         <div className="mb-8">
           <Link
             href="/styleguide"
-            className="inline-flex items-center mb-6 text-sm text-deep-navy hover:text-soft-sky-blue transition-colors"
+            className="inline-flex items-center mb-6 text-caption text-deep-navy hover:text-soft-sky-blue transition-colors font-korean"
           >
             ← 스타일 가이드로 돌아가기
           </Link>
-          <h1 className="text-3xl font-bold text-deep-navy mb-4">달력</h1>
-          <p className="text-lg text-soft-gray">
+          <h1 className="text-page-title text-deep-navy font-korean mb-4">
+            달력
+          </h1>
+          <p className="text-body text-soft-gray font-korean">
             날짜 선택을 위한 달력 컴포넌트 가이드라인입니다.
           </p>
         </div>
@@ -34,10 +36,10 @@ export default function CalendarPage() {
                 ></div>
               ))}
             </div>
-            <h3 className="text-xl font-semibold text-deep-navy mb-2">
+            <h3 className="text-card-title text-deep-navy font-korean mb-2">
               달력 콘텐츠
             </h3>
-            <p className="text-soft-gray">
+            <p className="text-body-small text-soft-gray font-korean">
               여기에 달력 컴포넌트 콘텐츠가 추가될 예정입니다.
             </p>
           </div>

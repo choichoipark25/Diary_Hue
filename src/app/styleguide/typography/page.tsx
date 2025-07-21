@@ -13,14 +13,14 @@ export default function TypographyPage() {
         <div className="mb-8">
           <Link
             href="/styleguide"
-            className="inline-flex items-center mb-6 text-caption text-deep-navy hover:text-soft-sky-blue transition-colors"
+            className="inline-flex items-center mb-6 text-caption text-deep-navy hover:text-soft-sky-blue transition-colors font-korean"
           >
             ← 스타일 가이드로 돌아가기
           </Link>
-          <h1 className="text-3xl font-bold text-deep-navy mb-4">
+          <h1 className="text-page-title text-deep-navy font-korean mb-4">
             타이포그래피
           </h1>
-          <p className="text-lg text-soft-gray">
+          <p className="text-body text-soft-gray font-korean">
             폰트 스타일과 텍스트 계층 구조 가이드라인입니다.
           </p>
         </div>
@@ -29,13 +29,15 @@ export default function TypographyPage() {
         <div className="space-y-8">
           {/* Heading Styles */}
           <div className="bg-white rounded-lg border border-gray-200 p-8">
-            <h2 className="text-page-title text-deep-navy mb-6">헤딩 스타일</h2>
+            <h2 className="text-section-title text-deep-navy font-korean mb-6">
+              헤딩 스타일
+            </h2>
 
             <div className="space-y-6">
               {/* H1 */}
               <div className="border-b border-gray-100 pb-6">
                 <div className="flex items-baseline justify-between mb-3">
-                  <span className="text-caption font-medium text-soft-gray">
+                  <span className="text-caption font-medium text-soft-gray font-korean">
                     H1 - HERO Title
                   </span>
                   <span className="text-caption text-soft-gray font-mono">
@@ -53,7 +55,7 @@ export default function TypographyPage() {
               {/* H2 */}
               <div className="border-b border-gray-100 pb-6">
                 <div className="flex items-baseline justify-between mb-3">
-                  <span className="text-caption font-medium text-soft-gray">
+                  <span className="text-caption font-medium text-soft-gray font-korean">
                     H2 - Page Title
                   </span>
                   <span className="text-caption text-soft-gray font-mono">
@@ -71,7 +73,7 @@ export default function TypographyPage() {
               {/* H3 */}
               <div className="border-b border-gray-100 pb-6">
                 <div className="flex items-baseline justify-between mb-3">
-                  <span className="text-caption font-medium text-soft-gray">
+                  <span className="text-caption font-medium text-soft-gray font-korean">
                     H3 - Section Title
                   </span>
                   <span className="text-caption text-soft-gray font-mono">
@@ -89,7 +91,7 @@ export default function TypographyPage() {
               {/* H4 */}
               <div>
                 <div className="flex items-baseline justify-between mb-3">
-                  <span className="text-caption font-medium text-soft-gray">
+                  <span className="text-caption font-medium text-soft-gray font-korean">
                     H4 - Card Title
                   </span>
                   <span className="text-caption text-soft-gray font-mono">
@@ -108,13 +110,15 @@ export default function TypographyPage() {
 
           {/* Body Styles */}
           <div className="bg-white rounded-lg border border-gray-200 p-8">
-            <h2 className="text-page-title text-deep-navy mb-6">본문 스타일</h2>
+            <h2 className="text-section-title text-deep-navy font-korean mb-6">
+              본문 스타일
+            </h2>
 
             <div className="space-y-6">
               {/* Body */}
               <div className="border-b border-gray-100 pb-6">
                 <div className="flex items-baseline justify-between mb-3">
-                  <span className="text-caption font-medium text-soft-gray">
+                  <span className="text-caption font-medium text-soft-gray font-korean">
                     Body - 기본 텍스트
                   </span>
                   <span className="text-caption text-soft-gray font-mono">
@@ -134,7 +138,7 @@ export default function TypographyPage() {
               {/* Body Small */}
               <div className="border-b border-gray-100 pb-6">
                 <div className="flex items-baseline justify-between mb-3">
-                  <span className="text-caption font-medium text-soft-gray">
+                  <span className="text-caption font-medium text-soft-gray font-korean">
                     Body small - 상세 텍스트
                   </span>
                   <span className="text-caption text-soft-gray font-mono">
@@ -154,7 +158,7 @@ export default function TypographyPage() {
               {/* Caption */}
               <div className="border-b border-gray-100 pb-6">
                 <div className="flex items-baseline justify-between mb-3">
-                  <span className="text-caption font-medium text-soft-gray">
+                  <span className="text-caption font-medium text-soft-gray font-korean">
                     Caption - 라벨 텍스트
                   </span>
                   <span className="text-caption text-soft-gray font-mono">
@@ -172,7 +176,7 @@ export default function TypographyPage() {
               {/* Poetry Body */}
               <div>
                 <div className="flex items-baseline justify-between mb-3">
-                  <span className="text-caption font-medium text-soft-gray">
+                  <span className="text-caption font-medium text-soft-gray font-korean">
                     시 본문 - 마음 깊이 스며드는 순간이 오늘을 파랗게만 감싸인다
                   </span>
                   <span className="text-caption text-soft-gray font-mono">
@@ -194,29 +198,37 @@ export default function TypographyPage() {
 
           {/* Font Information */}
           <div className="bg-white rounded-lg border border-gray-200 p-8">
-            <h2 className="text-page-title text-deep-navy mb-6">폰트 정보</h2>
+            <h2 className="text-section-title text-deep-navy font-korean mb-6">
+              폰트 정보
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Korean Font */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-section-title text-deep-navy mb-4 font-korean">
+                <h3 className="text-card-title text-deep-navy mb-4 font-korean">
                   한글 폰트
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-soft-gray">Font Family</span>
+                    <span className="text-body-small text-soft-gray font-korean">
+                      Font Family
+                    </span>
                     <span className="text-caption text-deep-navy font-mono">
                       &apos;Gowun Dodum&apos;
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-soft-gray">Fallback</span>
+                    <span className="text-body-small text-soft-gray font-korean">
+                      Fallback
+                    </span>
                     <span className="text-caption text-deep-navy font-mono">
                       sans-serif
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-soft-gray">Tailwind Class</span>
+                    <span className="text-body-small text-soft-gray font-korean">
+                      Tailwind Class
+                    </span>
                     <span className="text-caption text-deep-navy font-mono">
                       font-korean
                     </span>
@@ -232,24 +244,30 @@ export default function TypographyPage() {
 
               {/* English Font */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-section-title text-deep-navy mb-4 font-english">
+                <h3 className="text-card-title text-deep-navy mb-4 font-english">
                   English Font
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-soft-gray">Font Family</span>
+                    <span className="text-body-small text-soft-gray font-english">
+                      Font Family
+                    </span>
                     <span className="text-caption text-deep-navy font-mono">
                       &apos;Lato&apos;
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-soft-gray">Fallback</span>
+                    <span className="text-body-small text-soft-gray font-english">
+                      Fallback
+                    </span>
                     <span className="text-caption text-deep-navy font-mono">
                       sans-serif
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-soft-gray">Tailwind Class</span>
+                    <span className="text-body-small text-soft-gray font-english">
+                      Tailwind Class
+                    </span>
                     <span className="text-caption text-deep-navy font-mono">
                       font-english
                     </span>
@@ -269,15 +287,15 @@ export default function TypographyPage() {
 
             {/* Usage Guidelines */}
             <div className="mt-8 pt-8 border-t border-gray-200">
-              <h3 className="text-section-title text-deep-navy mb-4">
+              <h3 className="text-card-title text-deep-navy font-korean mb-4">
                 사용 가이드라인
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <h4 className="text-card-title text-deep-navy mb-2">
+                  <h4 className="text-card-title text-deep-navy font-korean mb-2">
                     헤딩 (Headings)
                   </h4>
-                  <ul className="space-y-1 text-caption text-soft-gray">
+                  <ul className="space-y-1 text-caption text-soft-gray font-korean">
                     <li>• H1: 페이지의 메인 타이틀 (42px)</li>
                     <li>• H2: 섹션의 대제목 (32px)</li>
                     <li>• H3: 서브섹션 제목 (22px)</li>
@@ -285,10 +303,10 @@ export default function TypographyPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-card-title text-deep-navy mb-2">
+                  <h4 className="text-card-title text-deep-navy font-korean mb-2">
                     본문 (Body Text)
                   </h4>
-                  <ul className="space-y-1 text-caption text-soft-gray">
+                  <ul className="space-y-1 text-caption text-soft-gray font-korean">
                     <li>• Body: 기본 본문 텍스트 (18px)</li>
                     <li>• Body Small: 부연 설명 (16px)</li>
                     <li>• Caption: 라벨, 날짜 등 (14px)</li>

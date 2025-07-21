@@ -22,14 +22,19 @@ const guideItems = [
     description: "다양한 버튼 스타일과 상태",
   },
   {
-    title: "툴팁",
-    path: "/styleguide/tooltip",
-    description: "정보 제공을 위한 툴팁 컴포넌트",
-  },
-  {
     title: "라벨",
     path: "/styleguide/label",
     description: "폼 요소와 정보 라벨",
+  },
+  {
+    title: "콘텐츠 카드",
+    path: "/styleguide/content-card",
+    description: "메인 페이지 콘텐츠 카드 컴포넌트",
+  },
+  {
+    title: "툴팁",
+    path: "/styleguide/tooltip",
+    description: "정보 제공을 위한 툴팁 컴포넌트",
   },
   {
     title: "체크박스",
@@ -49,16 +54,16 @@ export default function StyleGuidePage() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-deep-navy mb-4">
+          <h1 className="text-hero text-deep-navy font-korean mb-4">
             Diary Hue Style Guide
           </h1>
-          <p className="text-lg text-soft-gray max-w-2xl mx-auto">
+          <p className="text-body text-soft-gray font-korean max-w-2xl mx-auto">
             프로젝트에서 사용되는 디자인 시스템과 컴포넌트들을 확인할 수 있는
             가이드입니다.
           </p>
           <Link
             href="/"
-            className="inline-flex items-center mt-6 px-4 py-2 text-sm text-deep-navy hover:text-soft-sky-blue transition-colors"
+            className="inline-flex items-center mt-6 px-4 py-2 text-body-small text-deep-navy hover:text-soft-sky-blue transition-colors font-korean"
           >
             ← 메인 페이지로 돌아가기
           </Link>
@@ -72,13 +77,13 @@ export default function StyleGuidePage() {
               href={item.path}
               className="group block p-6 bg-white rounded-lg border border-gray-200 hover:border-soft-sky-blue hover:shadow-lg transition-all duration-200"
             >
-              <h3 className="text-xl font-semibold text-deep-navy mb-2 group-hover:text-soft-sky-blue transition-colors">
+              <h3 className="text-card-title text-deep-navy font-korean mb-2 group-hover:text-soft-sky-blue transition-colors">
                 {item.title}
               </h3>
-              <p className="text-soft-gray text-sm leading-relaxed">
+              <p className="text-body-small text-soft-gray font-korean leading-relaxed">
                 {item.description}
               </p>
-              <div className="mt-4 text-sm text-soft-sky-blue font-medium">
+              <div className="mt-4 text-body-small text-soft-sky-blue font-korean font-medium">
                 자세히 보기 →
               </div>
             </Link>

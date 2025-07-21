@@ -11,9 +11,13 @@ export default function Header({ username = "하하하" }: HeaderProps) {
   return (
     <header className="py-4 flex items-center justify-between">
       <div className="flex items-center gap-2">
-        <span className="text-lg font-medium">오늘의 일기</span>
+        <span className="text-card-title text-deep-navy font-korean">
+          오늘의 일기
+        </span>
       </div>
-      <div className="text-sm text-text-sub">#오늘 / {username}님</div>
+      <div className="text-caption text-soft-gray font-korean">
+        #오늘 / {username}님
+      </div>
     </header>
   );
 }

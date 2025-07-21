@@ -13,21 +13,21 @@ export default function ColorPalettePage() {
         <div className="mb-8">
           <Link
             href="/styleguide"
-            className="inline-flex items-center mb-6 text-sm text-deep-navy hover:text-soft-sky-blue transition-colors"
+            className="inline-flex items-center mb-6 text-caption text-deep-navy hover:text-soft-sky-blue transition-colors font-korean"
           >
             ← 스타일 가이드로 돌아가기
           </Link>
-          <h1 className="text-3xl font-bold text-deep-navy mb-4">
+          <h1 className="text-page-title text-deep-navy font-korean mb-4">
             컬러 팔레트
           </h1>
-          <p className="text-lg text-soft-gray">
+          <p className="text-body text-soft-gray font-korean">
             프로젝트에서 사용되는 색상 시스템과 컬러 가이드라인입니다.
           </p>
         </div>
 
         {/* Color Palette */}
         <div className="bg-white rounded-lg border border-gray-200 p-8">
-          <h2 className="text-2xl font-bold text-deep-navy mb-6">
+          <h2 className="text-section-title text-deep-navy font-korean mb-6">
             Primary Colors
           </h2>
 
@@ -36,57 +36,87 @@ export default function ColorPalettePage() {
             {/* Main Color */}
             <div className="text-center">
               <div className="w-full h-24 bg-soft-sky-blue rounded-lg mb-3 border-2 border-blue-200"></div>
-              <h3 className="font-semibold text-deep-navy mb-1">Main</h3>
-              <p className="text-sm text-soft-gray font-mono">#a8d8ea</p>
-              <p className="text-xs text-soft-gray mt-1">Soft Sky Blue</p>
+              <h3 className="text-card-title text-deep-navy font-korean mb-1">
+                Main
+              </h3>
+              <p className="text-body-small text-soft-gray font-mono">
+                #a8d8ea
+              </p>
+              <p className="text-caption text-soft-gray font-korean mt-1">
+                Soft Sky Blue
+              </p>
             </div>
 
             {/* Sub Color */}
             <div className="text-center">
               <div className="w-full h-24 bg-cozy-pink rounded-lg mb-3 border-2 border-pink-200"></div>
-              <h3 className="font-semibold text-deep-navy mb-1">Sub</h3>
-              <p className="text-sm text-soft-gray font-mono">#ffb3ba</p>
-              <p className="text-xs text-soft-gray mt-1">Cozy Pink</p>
+              <h3 className="text-card-title text-deep-navy font-korean mb-1">
+                Sub
+              </h3>
+              <p className="text-body-small text-soft-gray font-mono">
+                #ffb3ba
+              </p>
+              <p className="text-caption text-soft-gray font-korean mt-1">
+                Cozy Pink
+              </p>
             </div>
 
             {/* Accent Color */}
             <div className="text-center">
               <div className="w-full h-24 bg-cool-lavender rounded-lg mb-3 border-2 border-blue-100"></div>
-              <h3 className="font-semibold text-deep-navy mb-1">Accent</h3>
-              <p className="text-sm text-soft-gray font-mono">#bae1ff</p>
-              <p className="text-xs text-soft-gray mt-1">Cool Lavender</p>
+              <h3 className="text-card-title text-deep-navy font-korean mb-1">
+                Accent
+              </h3>
+              <p className="text-body-small text-soft-gray font-mono">
+                #bae1ff
+              </p>
+              <p className="text-caption text-soft-gray font-korean mt-1">
+                Cool Lavender
+              </p>
             </div>
 
             {/* Text Color */}
             <div className="text-center">
               <div className="w-full h-24 bg-deep-navy rounded-lg mb-3 border-2 border-gray-300"></div>
-              <h3 className="font-semibold text-deep-navy mb-1">Text</h3>
-              <p className="text-sm text-soft-gray font-mono">#2c3e50</p>
-              <p className="text-xs text-soft-gray mt-1">Deep Navy</p>
+              <h3 className="text-card-title text-deep-navy font-korean mb-1">
+                Text
+              </h3>
+              <p className="text-body-small text-soft-gray font-mono">
+                #2c3e50
+              </p>
+              <p className="text-caption text-soft-gray font-korean mt-1">
+                Deep Navy
+              </p>
             </div>
 
             {/* Sub Text Color */}
             <div className="text-center">
               <div className="w-full h-24 bg-soft-gray rounded-lg mb-3 border-2 border-gray-200"></div>
-              <h3 className="font-semibold text-deep-navy mb-1">Sub Text</h3>
-              <p className="text-sm text-soft-gray font-mono">#5d6d7e</p>
-              <p className="text-xs text-soft-gray mt-1">Soft Gray</p>
+              <h3 className="text-card-title text-deep-navy font-korean mb-1">
+                Sub Text
+              </h3>
+              <p className="text-body-small text-soft-gray font-mono">
+                #5d6d7e
+              </p>
+              <p className="text-caption text-soft-gray font-korean mt-1">
+                Soft Gray
+              </p>
             </div>
           </div>
 
           {/* Usage Examples */}
           <div className="border-t border-gray-200 pt-8">
-            <h2 className="text-2xl font-bold text-deep-navy mb-6">
+            <h2 className="text-section-title text-deep-navy font-korean mb-6">
               Usage Examples
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Tailwind CSS Classes */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-deep-navy mb-4">
+                <h3 className="text-card-title text-deep-navy font-korean mb-4">
                   Tailwind CSS Classes
                 </h3>
-                <div className="space-y-3 text-sm font-mono">
+                <div className="space-y-3 text-body-small font-mono">
                   <div className="flex justify-between">
                     <span className="text-soft-gray">text-soft-sky-blue</span>
                     <span className="text-soft-sky-blue">#a8d8ea</span>
@@ -112,31 +142,31 @@ export default function ColorPalettePage() {
 
               {/* Color Combinations */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-deep-navy mb-4">
+                <h3 className="text-card-title text-deep-navy font-korean mb-4">
                   Recommended Combinations
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-soft-sky-blue rounded"></div>
-                    <span className="text-soft-gray text-sm">
+                    <span className="text-soft-gray text-body-small font-korean">
                       Main + Deep Navy (Headers)
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-cozy-pink rounded"></div>
-                    <span className="text-soft-gray text-sm">
+                    <span className="text-soft-gray text-body-small font-korean">
                       Sub + Deep Navy (Highlights)
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-cool-lavender rounded"></div>
-                    <span className="text-soft-gray text-sm">
+                    <span className="text-soft-gray text-body-small font-korean">
                       Accent + Deep Navy (Actions)
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-deep-navy rounded"></div>
-                    <span className="text-soft-gray text-sm">
+                    <span className="text-soft-gray text-body-small font-korean">
                       Text + White (Body Text)
                     </span>
                   </div>

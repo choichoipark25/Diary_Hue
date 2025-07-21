@@ -5,11 +5,10 @@
 
 export default function FooterNotice() {
   return (
-    <footer className="w-full py-8 mt-auto border-t">
-      <p className="text-sm text-text-sub text-center">
+    <footer className="w-full py-8 mt-auto border-t border-gray-200">
+      <p className="text-caption text-soft-gray font-korean text-center">
         개발 주우우우우웅
-        <br />
-        재밌다아아아아아 :)
+        <br />© Choi Choi Company. All rights reserved.
       </p>
     </footer>
   );
